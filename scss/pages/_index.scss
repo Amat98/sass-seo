@@ -1,0 +1,55 @@
+@import "../abstracts/mixins";
+@import "../abstracts/maps";
+
+
+/*MAIN INDEX*/
+
+.body-index{
+    .main-index{
+
+        //INCLUY VARIABLES
+        text-align: center;
+        font-size: 25px;
+        margin-top: 50px;
+        h1{
+            color: $color-secundario;
+            text-shadow: 4px 4px 4px black;
+            
+        }
+        h2{
+            color: $color-principal;
+            text-shadow: 2px 2px 2px black;
+        }
+        
+        .botones{
+            display: flex;
+            justify-content: center;
+            font-size: 35px;
+            
+            
+
+            //INCLUYE MAP Y EXTEND Y VARIABLES
+            .boton-uno{
+                
+                @extend %botones;
+                background-color: map-get($map: $colores-artistas, $key: primario );
+                a{
+                    color: $color-secundario;
+                }
+                
+            }
+
+            .boton-dos{
+                @extend %botones;
+                background-color: map-get($map: $colores-artistas, $key: tercero );
+                a{
+                    color: $color-principal;
+                }
+            }
+
+            
+        }
+        
+        
+    }
+}

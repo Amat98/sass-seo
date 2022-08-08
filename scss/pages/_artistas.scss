@@ -1,0 +1,79 @@
+@import "../abstracts/maps";
+
+/*MAIN DE ARTISTAS*/
+
+.body-art{
+    .main-art{
+        color: map-get($map: $colores-artistas, $key:secundario );
+        font-size: 25px;
+        h1{
+            color: map-get($map: $colores-artistas, $key:primario );
+            text-align: center;
+            font-size: 50px;
+            font-family: 'Kalam', cursive;
+        }
+        
+        section{
+            
+
+            .cuadro-uno{
+                display: grid;
+                margin-left: 15px;
+                margin-right: 15px;
+                margin-bottom: 30px;
+                
+                //APLICANDO MAP
+                background-color: map-get($map: $colores-artistas, $key:transparente );
+                .img-uno{
+                    
+                    //APLICANDO MIXIN
+                    @include cuadrado-uno;
+                    padding-top: 15px;
+                    
+                }
+
+                .titulo-uno{
+                     //APLICANDO MAP
+                    color: map-get($map: $colores-artistas, $key:primario );
+                    text-align: center;
+                    font-size: 40px;
+                }
+                p{
+                    padding: 10px;
+                    font-size: 30px;
+                }
+                
+            }
+
+            .cuadro-dos{
+                display: grid;
+                margin-left: 15px;
+                margin-right: 15px;
+                margin-bottom: 30px;
+                
+                 //APLICANDO MAP
+                background-color: map-get($map: $colores-artistas, $key:transparente );
+                .img-dos{
+                    @include cuadrado-uno;
+                    padding-top: 15px;
+                    
+                }
+
+                .titulo-dos{
+
+                     //APLICANDO MAP
+                    color:map-get($map: $colores-artistas, $key:primario );
+                    text-align: center;
+                    font-size:40px;
+                }
+                p{
+                    padding: 10px;
+                    font-size: 30px;
+                }
+                
+            }
+
+        }
+        
+    }
+}

@@ -1,0 +1,39 @@
+/*RESET*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Teko', sans-serif;
+    list-style: none;
+}
+
+/*GRID GENERAL*/
+
+body{
+    display: grid;
+    grid-template-areas: "header header"
+                         "main main"
+                         "footer footer";
+    
+    main{
+        grid-area: main;
+    }
+    
+    
+}
+
+
+
+
+
+
+
+/*FOOTER*/
+footer {
+    grid-area: footer;
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin-top: auto;
+    font-size: 25px; }

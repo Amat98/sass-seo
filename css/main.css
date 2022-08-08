@@ -1,0 +1,198 @@
+/*RESET*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Teko', sans-serif;
+  list-style: none; }
+
+/*GRID GENERAL*/
+body {
+  display: grid;
+  grid-template-areas: "header header" "main main" "footer footer"; }
+  body main {
+    grid-area: main; }
+
+/*FOOTER*/
+footer {
+  grid-area: footer;
+  text-align: center;
+  background-color: black;
+  color: white;
+  margin-top: auto;
+  font-size: 25px; }
+
+/*FONDOS DE PAGINAs*/
+.body-index {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/fondo1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed; }
+
+.body-art {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/fondo2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed; }
+
+.body-can {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/fondo3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed; }
+
+.body-nosotros {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/fondo4.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed; }
+
+.body-contacto {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/fondo5.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed; }
+
+/*MENU DE NAVEGACION*/
+header {
+  grid-area: header;
+  background-color: black;
+  height: 110px; }
+  header nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    header nav section .logo-uno {
+      width: 280px;
+      margin-left: 10px;
+      margin-top: 5px; }
+    header nav .logo-dos {
+      display: none; }
+    header nav .bar-btn {
+      color: #ff3333;
+      font-size: 50px;
+      margin-right: 20px;
+      cursor: pointer; }
+    header nav .nav-menu {
+      position: fixed;
+      width: 100%;
+      height: 0vh;
+      top: 110px;
+      background-color: rgba(0, 0, 0, 0.9);
+      text-align: center;
+      transition: all .5s; }
+      header nav .nav-menu li {
+        display: none;
+        line-height: 40px;
+        margin: 50px 0;
+        transition: all .5s; }
+        header nav .nav-menu li a {
+          color: white;
+          font-size: 40px;
+          text-transform: uppercase;
+          font-weight: 500; }
+    header nav .nav-menu li, header nav .nav-menu li a:hover {
+      color: #ff3333;
+      transition: .5s; }
+    header nav #check {
+      display: none; }
+    header nav #check:checked ~ .nav-menu {
+      height: 100vh; }
+    header nav #check:checked ~ .nav-menu li {
+      display: block; }
+
+/*EJEMPLO EXTEND EN INDEX*/
+.body-index .main-index .botones .boton-uno, .body-index .main-index .botones .boton-dos {
+  width: 130px;
+  font-size: 35px;
+  font-weight: 500;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-right: 10px; }
+
+/*MAIN INDEX*/
+.body-index .main-index {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 50px; }
+  .body-index .main-index h1 {
+    color: white;
+    text-shadow: 4px 4px 4px black; }
+  .body-index .main-index h2 {
+    color: #ff3333;
+    text-shadow: 2px 2px 2px black; }
+  .body-index .main-index .botones {
+    display: flex;
+    justify-content: center;
+    font-size: 35px; }
+    .body-index .main-index .botones .boton-uno {
+      background-color: #ff3333; }
+      .body-index .main-index .botones .boton-uno a {
+        color: white; }
+    .body-index .main-index .botones .boton-dos {
+      background-color: black; }
+      .body-index .main-index .botones .boton-dos a {
+        color: #ff3333; }
+
+/*MAIN DE ARTISTAS*/
+.body-art .main-art {
+  color: white;
+  font-size: 25px; }
+  .body-art .main-art h1 {
+    color: #ff3333;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Kalam', cursive; }
+  .body-art .main-art section .cuadro-uno {
+    display: grid;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 30px;
+    background-color: rgba(0, 0, 0, 0.9); }
+    .body-art .main-art section .cuadro-uno .img-uno {
+      width: 300px;
+      margin: auto;
+      padding-top: 15px; }
+    .body-art .main-art section .cuadro-uno .titulo-uno {
+      color: #ff3333;
+      text-align: center;
+      font-size: 40px; }
+    .body-art .main-art section .cuadro-uno p {
+      padding: 10px;
+      font-size: 30px; }
+  .body-art .main-art section .cuadro-dos {
+    display: grid;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 30px;
+    background-color: rgba(0, 0, 0, 0.9); }
+    .body-art .main-art section .cuadro-dos .img-dos {
+      width: 300px;
+      margin: auto;
+      padding-top: 15px; }
+    .body-art .main-art section .cuadro-dos .titulo-dos {
+      color: #ff3333;
+      text-align: center;
+      font-size: 40px; }
+    .body-art .main-art section .cuadro-dos p {
+      padding: 10px;
+      font-size: 30px; }
+
+/*MAIN CANCIONES*/
